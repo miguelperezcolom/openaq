@@ -1,0 +1,5 @@
+﻿GET https://miguelperezcolom-openaq.azurewebsites.net/api/GetCitiesFunction
+
+###
+
+GET https://miguelperezcolom-openaq.azurewebsites.net/api/GetMeasurementsFunction?city=Madrid
