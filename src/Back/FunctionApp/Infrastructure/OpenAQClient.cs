@@ -47,7 +47,8 @@ public class OpenAQClient : IOpenAQClient
             Id = $"{group.Location}-{measurement.Parameter}",
             Position = group.Location,
             Name = measurement.Parameter,
-            Value = measurement.Value
+            Value = measurement.Value,
+            Unit = measurement.Unit
         })).ToList();
     }
 }
