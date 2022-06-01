@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using FunctionApp.Domain.Shared;
 
 namespace FunctionApp.Domain.GetCities;
@@ -13,8 +14,8 @@ public class GetCitiesQuery
         _openAqClient = openAqClient;
     }
 
-    public List<City> RunAsync()
+    public async Task<List<City>> RunAsync()
     {
-        return _openAqClient.GetCities();
+        return await _openAqClient.GetCities();
     }
 }

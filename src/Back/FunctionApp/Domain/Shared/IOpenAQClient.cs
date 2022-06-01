@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FunctionApp.Domain.Shared;
 
 public interface IOpenAQClient
 {
 
-    public List<City> GetCities();
+    public Task<List<City>> GetCities();
     
-    public List<Measurement> GetMeasurements(string city);
+    public Task<List<Measurement>> GetMeasurements(string city);
     
 }
 

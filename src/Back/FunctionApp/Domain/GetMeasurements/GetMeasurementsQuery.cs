@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using FunctionApp.Domain.Shared;
 
 namespace FunctionApp.Domain.GetMeasurements;
@@ -15,9 +16,9 @@ public class GetMeasurementsQuery
         _city = city;
     }
 
-    public List<Measurement> RunAsync()
+    public async Task<List<Measurement>> RunAsync()
     {
-        return _openAqClient.GetMeasurements(_city);
+        return await _openAqClient.GetMeasurements(_city);
     }
     
 }
