@@ -2,7 +2,7 @@
 
 This project contains a simplified web client for the OpenAQ API (https://api.openaq.org/docs).
 
-# The project
+## The project
 
 This was quite a simple one (3 cards only), and the board is available at https://github.com/users/miguelperezcolom/projects/3/views/1
 
