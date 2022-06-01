@@ -5,7 +5,6 @@
       :label-width="80"
       :model="query"
       :rules="rules"
-      :size="size"
   >
     <n-form-item label="City" path="city">
       <n-select v-model:value="query.city" :options="query.cities" style="min-width: 250px;"/>
@@ -35,9 +34,7 @@ const query = useQueryStore();
 const formRef = ref<FormInst | null>(null);
 const message = useMessage();
 
-const size = ref("medium");
-
-const rules = {
+const rules: FormRules = {
   city: {
     required: true,
     type: "string",

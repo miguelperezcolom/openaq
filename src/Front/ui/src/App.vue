@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import {NGrid, NGridItem, NMessageProvider,} from "naive-ui";
+import QueryView from './components/QueryView.vue'
+</script>
+
 <template>
   <n-message-provider>
     <n-grid x-gap="12" cols="12" item-responsive>
@@ -7,10 +12,6 @@
     </n-grid>
   </n-message-provider>
 </template>
-
-<script setup lang="ts">
-import {NGrid, NGridItem, NMessageProvider,} from "naive-ui";
-import QueryView from './components/QueryView.vue'</script>
 
 <style>
 </style>

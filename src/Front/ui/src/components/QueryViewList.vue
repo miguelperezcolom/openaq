@@ -10,12 +10,12 @@
 </template>
 
 <script setup lang="ts">
-import {NDataTable,} from "naive-ui";
+import {NDataTable, DataTableColumns } from "naive-ui";
 import {useQueryStore} from "../store/query";
 
 const query = useQueryStore();
 
-const columns = [
+const columns: DataTableColumns<any> = [
   {
     title: "Location",
     key: "pos",
