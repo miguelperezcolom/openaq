@@ -1,0 +1,5 @@
+﻿GET http://localhost:7071/api/GetCitiesFunction
+
+###
+
+http://localhost:7071/api/GetMeasurementsFunction?city=Madrid
