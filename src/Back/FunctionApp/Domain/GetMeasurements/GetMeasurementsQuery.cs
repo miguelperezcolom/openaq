@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using FunctionApp.Domain.Shared;
+using FunctionApp.Domain.Shared.Model;
 
 namespace FunctionApp.Domain.GetMeasurements;
 

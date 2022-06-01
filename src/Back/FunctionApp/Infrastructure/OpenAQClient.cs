@@ -4,6 +4,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using FunctionApp.Domain.Shared;
+using FunctionApp.Domain.Shared.Model;
+using FunctionApp.Infrastructure.Model;
 
 namespace FunctionApp.Infrastructure;
 
@@ -51,45 +53,4 @@ public class OpenAQClient : IOpenAQClient
             Unit = measurement.Unit
         })).ToList();
     }
-}
-
-public class GetCitiesResponse
-{
-
-    public OpenCity[] Results { get; set; }
-
-}
-
-public class OpenCity
-{
-
-    public string City { get; set; }
-
-}
-
-public class GetMeasurementsResponse
-{
-
-    public LocationGroup[] Results { get; set; }
-
-}
-
-public class LocationGroup
-{
-
-    public string Location { get; set; }
-    
-    public OpenMeasurement[] Measurements { get; set; }
-
-}
-
-public class OpenMeasurement
-{
-
-    public string Parameter { get; set; }
-
-    public string Value { get; set; }
-    
-    public string Unit { get; set; }
-
 }
