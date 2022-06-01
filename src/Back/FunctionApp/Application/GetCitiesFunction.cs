@@ -25,7 +25,7 @@ public class GetCitiesFunction
     {
         log.LogInformation("C# HTTP trigger function GetCitiesFunction processed a request.");
 
-        var cities = new GetCitiesQuery(_openAqClient).RunAsync();
+        var cities = await new GetCitiesQuery(_openAqClient).RunAsync();
 
         return new OkObjectResult(cities);
         

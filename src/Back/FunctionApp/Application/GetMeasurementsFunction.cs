@@ -31,7 +31,7 @@ public class GetMeasurementsFunction
 
         string city = req.Query["city"];
         
-        var measurements = new GetMeasurementsQuery(_openAqClient, city).RunAsync();
+        var measurements = await new GetMeasurementsQuery(_openAqClient, city).RunAsync();
 
         return city != null
             ? (ActionResult) new OkObjectResult(measurements)
