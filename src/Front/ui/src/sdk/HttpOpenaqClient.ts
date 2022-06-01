@@ -10,7 +10,7 @@ export default class HttpOpenaqClient implements OpenaqClient {
     var url = "https://miguelperezcolom-openaq.azurewebsites.net/api/GetCitiesFunction";
     const data = await fetch(url)
       .then((response) => response.text())
-      .then((text) => JSON.parse(text).results.map((r: any) => ({
+      .then((text) => JSON.parse(text).map((r: any) => ({
         label: r.name,
         value: r.id
       })))
@@ -26,7 +26,7 @@ export default class HttpOpenaqClient implements OpenaqClient {
     var url = "https://miguelperezcolom-openaq.azurewebsites.net/api/GetMeasurementsFunction?city=" + encodeURIComponent(city);
     const data = await fetch(url)
       .then((response) => response.text())
-      .then((text) => JSON.parse(text).results.map((m: any) => ({
+      .then((text) => JSON.parse(text).map((m: any) => ({
             id: m.id,
             pos: m.position,
             prop: m.name,
