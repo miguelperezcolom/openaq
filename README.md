@@ -12,9 +12,9 @@ Mainly, I have built a SPA which relies in its own backend which, in fact, is ju
 
 I have used Vue + TS to build the web client. It uses Pinia (https://pinia.vuejs.org/) to build the state store and Naive UI (https://www.naiveui.com) as the design system.
 
-All the logic was first implemented at the client side (no need for anything else, indeed) and, when it worked, I migrated the facade to Azure functions.
+All the logic was first implemented at the client side (no need for anything else, indeed) and, when it worked, I migrated the facade to Azure functions. To put some c# there.
 
-The ap has been published using Netlify at it's available at https://glistening-bublanina-53138f.netlify.app/
+The app has been published using Netlify at it's available at https://glistening-bublanina-53138f.netlify.app/
 
 ## The API
 
